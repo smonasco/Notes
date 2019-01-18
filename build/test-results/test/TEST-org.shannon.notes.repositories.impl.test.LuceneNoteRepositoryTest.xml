@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.shannon.notes.repositories.impl.test.LuceneNoteRepositoryTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-01-17T23:59:29" hostname="DESKTOP-23JH4AJ" time="20.562">
+  <properties/>
+  <testcase name="saveNoID" classname="org.shannon.notes.repositories.impl.test.LuceneNoteRepositoryTest" time="1.354"/>
+  <testcase name="delete" classname="org.shannon.notes.repositories.impl.test.LuceneNoteRepositoryTest" time="0.172"/>
+  <testcase name="saveID" classname="org.shannon.notes.repositories.impl.test.LuceneNoteRepositoryTest" time="0.185"/>
+  <testcase name="search" classname="org.shannon.notes.repositories.impl.test.LuceneNoteRepositoryTest" time="0.343"/>
+  <testcase name="findAll" classname="org.shannon.notes.repositories.impl.test.LuceneNoteRepositoryTest" time="9.386"/>
+  <testcase name="dataPersists" classname="org.shannon.notes.repositories.impl.test.LuceneNoteRepositoryTest" time="9.122"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

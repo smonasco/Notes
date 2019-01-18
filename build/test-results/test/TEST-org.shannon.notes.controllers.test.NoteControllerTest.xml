@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.shannon.notes.controllers.test.NoteControllerTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2019-01-17T23:59:29" hostname="DESKTOP-23JH4AJ" time="0.206">
+  <properties/>
+  <testcase name="givenId_whenPost_thenBadRequest" classname="org.shannon.notes.controllers.test.NoteControllerTest" time="0.137"/>
+  <testcase name="getAll" classname="org.shannon.notes.controllers.test.NoteControllerTest" time="0.025"/>
+  <testcase name="givenNoID_whenPut_thenBadRequest" classname="org.shannon.notes.controllers.test.NoteControllerTest" time="0.001"/>
+  <testcase name="search" classname="org.shannon.notes.controllers.test.NoteControllerTest" time="0.031"/>
+  <testcase name="givenNoteAndBustedRepository_whenPost_thenInternalError" classname="org.shannon.notes.controllers.test.NoteControllerTest" time="0.001"/>
+  <testcase name="givenNoID_whenGet_thenBadRequest" classname="org.shannon.notes.controllers.test.NoteControllerTest" time="0.001"/>
+  <testcase name="givenValidNote_whenPut_thenGetGiven" classname="org.shannon.notes.controllers.test.NoteControllerTest" time="0.001"/>
+  <testcase name="givenSomeID_whenGet_thenItIsReturned" classname="org.shannon.notes.controllers.test.NoteControllerTest" time="0.002"/>
+  <testcase name="givenNoteAndValidRepositoryResponse_whenPost_thenSavedNote" classname="org.shannon.notes.controllers.test.NoteControllerTest" time="0.001"/>
+  <testcase name="givenNoID_whenDelete_thenBadRequest" classname="org.shannon.notes.controllers.test.NoteControllerTest" time="0.001"/>
+  <testcase name="givenSomeID_whenDelete_thenItIsDeleted" classname="org.shannon.notes.controllers.test.NoteControllerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
