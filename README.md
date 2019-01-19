@@ -1,5 +1,10 @@
 # Welcome to Notes!
 This is a simple RESTful app to store some notes in a Lucene index.
+
+Note: you may need enhanced privileges to run this app since it runs on port 80. If you prefer to use a different port, then pass in the
+port in the command line as a Java System property `-Dserver.port=_port_` before the jar like this:
+>java -jar -Dserver.port=8080 Notes-all.jar -t
+
 # Easiest Run it
 Navigate to build/libs and run the following
 >java -jar Notes-all.jar -t
@@ -13,7 +18,7 @@ Navigate to build/libs and run the following
 It will now create your directory and you can persist data between runs
 # Swagger
 As a bonus you can get the Swagger UI at
->http://localhost/swager-ui.html
+>http://localhost/swagger-ui.html
 
 Or the harder to read for humans, swagger documentation (used for various code gen utilities) at
 >http://localhost/v2/api-docs
@@ -24,19 +29,19 @@ Curl statements below are made for Windows commandline, but should work for Linu
 ## Post /api/Notes
 This will create a note, but shouldn't have an ID.
 >curl -i -H "Content-Type: application/json" -X POST -d "{\"body\" : \"Pick up milk!\"}" http://localhost/api/notes
-## Get /api/Notes
+## Get /api/notes
 Lists everything
 >curl -i -X GET http://localhost/api/notes
-## Get /api/Notes/{id}
+## Get /api/notes/{id}
 Lists the note with the id
 >curl -i -X GET http://localhost/api/notes{id}
-## Get /api/Notes?query=string
+## Get /api/notes?query=string
 Returns the results of a Lucene search
 >curl -i -X GET http://localhost/api/notes?query=milk
-## Delete /api/Notes/{id}
+## Delete /api/notes/{id}
 Delete your note
 >curl -i -XDELETE http://localhost/api/notes/1
-## Put /api/Notes/{id}
+## Put /api/notes/{id}
 Updates a note. ID must be present in the URL and if present in the note then it must match. In this case we are reserving the ID generation for the database and indicating that the user may not submit their own.
 >curl -i -H "Content-Type: application/json" -XPUT -d "{ \"id\": 3, \"body\" : \"email robert@gmail.com\"}" http://localhost/api/notes/3
 
@@ -52,7 +57,7 @@ Updates a note. ID must be present in the URL and if present in the note then it
 In an app, you know what's used, and more work than brings value is just that.
 Certainly, if it was being used or being presented in a library I would have implemented and tested it.
 # Gradle Tasks
-Here we use the gradle wrapper. I'm unsure if you will have to download gradle to run them since part of the point of the gradle wrapper is to lock down a version and a jar is used by the wrapper.
+Here we use the gradle wrapper. I'm unsure if you will have to download gradle to run them since part of the point of the gradle wrapper is to lock down a version and pulls down its own jar in `/gradle/wrapper/gradle-wrapper.jar`.
 ## Building
 Navigate to the base directory `Notes` and run the following
 >./gradlew shadowJar
